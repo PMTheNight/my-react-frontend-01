@@ -1,16 +1,26 @@
-# React + Vite
+# Password Change Assignment — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+This React/Vite application is the frontend submission for the Password Change assignment.
 
-Currently, two official plugins are available:
+## Implemented
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Cookie-session initialization with /api/me, login, logout, and route protection.
+- Every API request includes credentials so the HTTP-only JWT cookie is used safely.
+- Item list and CRUD interface for signed-in users.
+- Admin-only User menu and protected user-management page.
+- Admin user management, including a Change password dialog that calls PUT /api/user/:user_id/password.
+- Deployment configuration reads the backend URL from VITE_API_URL.
 
-## React Compiler
+## Deployment
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Live application: https://my-react-frontend-01-bice.vercel.app/login
 
-## Expanding the Oxlint configuration
+Configured backend: https://my-next-backend-02-seven.vercel.app/
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Submission checklist
+
+- [x] Uses the lecture JWT cookie, proxy, and request-header approach.
+- [x] Shows User management only to the Admin user.
+- [x] Provides password change UI and backend-protected password update.
+- [x] Built and deployed on Vercel.
+- [ ] Complete end-to-end login/audit-log evidence after the private backend environment values are entered in Vercel.
